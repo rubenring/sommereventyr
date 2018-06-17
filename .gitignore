@@ -3,6 +3,7 @@
 # dependencies
 frontend/sommereventyr_2018_reuben/node_modules
 frontend/node_modules
+/.vscode
 
 # testing
 frontend/sommereventyr_2018_reuben/coverage
