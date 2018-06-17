@@ -1,10 +1,14 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { NotFoundPage } from './NotFoundPage';
 
-const Router = () => {
+export const AppRouter = (props) => {
   return (
     <Router>
-      <Route component={} />
+      <Switch>
+
+        <Route {...props} component={NotFoundPage} />
+      </Switch>
     </Router>
   )
 };
