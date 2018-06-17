@@ -1,0 +1,5 @@
+Oppgave 1 - Skjult tekst med css
+Oppgave 2 - Løse matteoppgave i binærtall
+oppgave 3 - regex oppgave
+Oppgave 4 - Passordboks 
+Oppgave 5 - Finne svaret
