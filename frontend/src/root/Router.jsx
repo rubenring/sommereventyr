@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { NotFoundPage } from './NotFoundPage';
 import { InfoPage } from './InfoPage';
@@ -7,11 +7,15 @@ import { PageTwo } from "../page-two/PageTwo";
 import { PageThree } from "../page-three/PageThree";
 import { PageFour } from "../page-four/PageFour";
 import { PageFive } from "../page-five/PageFive";
+import { Header } from '../commen/Header';
+
 
 
 export const AppRouter = (props) => {
   return (
     <Router>
+      <Fragment>
+      <Header username={props.username} updateName={props.updateName} logo={props.logo} {...props}/>      
       <Switch>
         <Route exact path='/' {...props} component={InfoPage}/>
         <Route path='/page-one' {...props} component={PageOne}/>
@@ -22,6 +26,7 @@ export const AppRouter = (props) => {
 
         <Route {...props} component={NotFoundPage} />
       </Switch>
+      </Fragment>
     </Router>
   )
 };

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import { AppRouter } from './root/Router';
-import { Header } from './commen/Header';
 import './App.css';
 
 class App extends Component {
@@ -39,8 +38,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header username={this.state.username} updateName={this.updateName} logo={logo}/>
-        <AppRouter username={this.state.username} />
+        <AppRouter username={this.state.username} updateName={this.updateName} logo={logo} />
       </div>
     );
   }
