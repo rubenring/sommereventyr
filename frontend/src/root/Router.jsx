@@ -15,7 +15,7 @@ export const AppRouter = (props) => {
   return (
     <Router>
       <Fragment>
-      <Header username={props.username} updateName={props.updateName} logo={props.logo} {...props}/>      
+      <Header username={props.username} logo={props.logo} {...props}/>      
       <Switch>
         <Route exact path='/' {...props} component={InfoPage}/>
         <Route path='/page-one' {...props} component={PageOne}/>

@@ -30,7 +30,7 @@ export class InputAndButton extends Component {
           className='input-and-button-button'
           onClick={this.onClick}
          >
-          Lagre
+          Send svar
          </button>
       </section>
     );

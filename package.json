@@ -18,6 +18,7 @@
     "express": "^4.16.3",
     "limax": "^1.6.0",
     "mongoose": "^5.1.5",
+    "monk": "^6.0.6",
     "query-string": "^6.1.0",
     "sanitize-html": "^1.18.2"
   },
