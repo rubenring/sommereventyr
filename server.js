@@ -185,7 +185,10 @@ app.post('/api/:username/answerfour', (req, res) => {
   const body = req.body;
   if(body.svar && body.svar.toLowerCase() === "kp" || body.svar.toLowerCase() === "pk"){
     findOneAndUpdateLevel(username, 4).then(x => {
-      res.send(respSuccessModel(4, 'kp', username, true, false));
+      res.send({
+        ...respSuccessModel(4, 'kp', username, true, false),
+        anagram: 'ropnkdap'
+      });
       return;
     });
     return;
@@ -203,22 +206,24 @@ app.post('/api/:username/answerlast', (req, res) => {
     res.send({"hasUsername": false, username: ''});
     return;
   }
-  const level = 5;
-  if(level < 4){
-    /* Sjekke brukernavn mot level i db */
-   res.send({
-     "username": username,
-     "level": level
-    })
-    return;
-  }
+  findUser(username)
+    .then(user => {
+      if(user.level < 4){
+        res.send({
+          'username': username,
+          'answer': false,
+          'toLowLevel': true
+        });
+      }
+    });
   const body = req.body;
   if(body.svar && body.svar.toLowerCase() === "nordkapp"){
-    //oppdater db level for username
-    res.send({
-      long: '124',
-      lat: '200'
-    })
+    findOneAndUpdateLevel(username, 4).then(x => {
+      res.send({
+        long: '124',
+        lat: '200'
+      });
+    });
     return;
   }
   res.send({
