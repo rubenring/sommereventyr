@@ -1,0 +1,36 @@
+{
+  "name": "example-create-react-app-express",
+  "version": "1.0.0",
+  "description": "Example on using create-react-app with a Node Express Backend",
+  "author": {
+    "name": "Reuben Ringdal",
+    "email": "rubenringdal@gmail.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "client": "cd frontend && yarn start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cuid": "^2.1.1",
+    "express": "^4.16.3",
+    "limax": "^1.6.0",
+    "mongoose": "^5.1.5",
+    "query-string": "^6.1.0",
+    "sanitize-html": "^1.18.2"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/esausilva/example-create-react-app-express.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "create-react-app"
+  ]
+}
