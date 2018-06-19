@@ -15,21 +15,26 @@ export class PageFive extends Component {
       value: '',
       level: 10,
       lat: '',
-      long: ''
+      long: '',
+      hasUsername: false,
+      toLowLevel: false
     }
     this.lagreSvar = this.lagreSvar.bind(this);
     this.onChange = this.onChange.bind(this);
 
   }
   componentDidMount(){
-    const url = `/api/${this.username}/level`;
-
-    apiCallGet(url)
-      .then(res => {
-        this.setState({
-          level: res.level
+    if(this.username){
+      const url = `/api/${this.username}/progress`;
+      apiCallGet(url)
+        .then(res => {
+          this.setState({
+            level: res.level,
+            hasUsername: res.hasUsername,
+            username: res.username
+          })
         })
-      })
+    }
   }
   onChange(value){
     this.setState({
@@ -44,7 +49,6 @@ export class PageFive extends Component {
       const url = `/api/${this.username}/answerlast`;
       apiCallPost(url, svar)
         .then(res => {
-          console.log(res);
           this.setState({
             long: res.long,
             lat: res.lat
@@ -56,7 +60,7 @@ export class PageFive extends Component {
   render(){
     return (
       <CheckUsername
-        username={this.username}
+        hasUsername={this.state.hasUsername}
       >
       {
         this.state.level < 4 ? <Redirect to={`/?username=${this.username}`}/> : null 
