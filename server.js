@@ -220,8 +220,8 @@ app.post('/api/:username/answerlast', (req, res) => {
   if(body.svar && body.svar.toLowerCase() === "nordkapp"){
     findOneAndUpdateLevel(username, 4).then(x => {
       res.send({
-        long: '124',
-        lat: '200'
+        long: '59.913258',
+        lat: '10.748654'
       });
     });
     return;
