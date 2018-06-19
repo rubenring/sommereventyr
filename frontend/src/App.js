@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import { AppRouter } from './root/Router';
 import './App.css';
+import { checkstatus, parseJSON } from './utils';
 
 class App extends Component {
   constructor(props){
@@ -16,8 +17,14 @@ class App extends Component {
  
   componentDidMount() {
     this.callApi()
-      .then(res => this.setState({ response: res.express }))
-      .catch(err => console.log(err));
+    .then(checkstatus)
+    .then(parseJSON)
+    .then(json => {
+      this.setState({
+        username: json.username
+      })
+    })
+    .catch(err => console.log(err));
   }
   updateName(e){
     this.setState({
@@ -28,11 +35,7 @@ class App extends Component {
 
   }
   callApi = () => {
-    const response = fetch('/api/hello');
-    // const body =  response.json();
-
-    // if (response.status !== 200) throw Error(body.message);
-
+    const response = fetch('/api/test/progress');
     return response;
   };
   render() {

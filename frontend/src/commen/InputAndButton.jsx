@@ -5,14 +5,13 @@ export class InputAndButton extends Component {
   constructor(props){
     super(props);
     this.onChange = this.onChange.bind(this);
-    this.state = {
-      value: ''
-    };
+    this.onClick = this.onClick.bind(this);
   }
   onChange(e){
-    this.setState({
-      value: e.target.value
-    });
+    this.props.onChange(e.target.value)
+  }
+  onClick(){
+    this.props.onClick(this.props.value)
   }
   render(){
     return (
@@ -29,7 +28,7 @@ export class InputAndButton extends Component {
          </label>
          <button 
           className='input-and-button-button'
-          onClick={() => this.props.onClick(this.state.value)}
+          onClick={this.onClick}
          >
           Lagre
          </button>
