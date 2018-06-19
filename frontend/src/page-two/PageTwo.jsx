@@ -61,7 +61,7 @@ export class PageTwo extends Component {
             <p>Flere i gruppen ønsker å se Nidarosdomen og svinge seg litt på Solsiden.</p>
             <p>Dette vil koste penger så dere prøver å få haik oppover</p>
             <p>En bil stopper og det er ingen ringere enn Åge Alexandersen som stiger ut</p>
-            <p>Han synger noen stofer og ber dere løse neste oppgave før han vil kjøre dere oppover mot sitt kjære Trondheim.</p>
+            <p>Han synger noen strofer og ber dere løse neste oppgave før han vil kjøre dere oppover mot sitt kjære Trondheim.</p>
           </div>
 
 

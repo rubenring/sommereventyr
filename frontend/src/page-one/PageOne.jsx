@@ -62,9 +62,9 @@ export class PageOne extends Component {
           <div>
             <p>Vi befinner oss i Oslo. Den flotteste byen i dette langstrakte land.</p>
             <p>I Oslo er det veldig dyrt, og etter at dere har spist en bedre middag</p>
-            <p>er det ikke lengre penger igjen til togbillett over fjellet.</p>
+            <p>er det ikke lenger penger igjen til togbillett over fjellet.</p>
             <p>Dere møter en dame som sier hun kan snike dere på nattoget</p>
-            <p>men kun om dere hjelper hun å finne 2 bokstaver hun har mistet.</p>
+            <p>men kun om dere hjelper henne å finne 2 bokstaver hun har mistet.</p>
 
             
           </div>
