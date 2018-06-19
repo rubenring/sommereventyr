@@ -29,6 +29,9 @@
     "type": "git",
     "url": "https://github.com/esausilva/example-create-react-app-express.git"
   },
+  "engines": {
+    "node": "8.11.3"
+  },
   "keywords": [
     "node",
     "express",
